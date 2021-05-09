@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 using WebApiAspNetCore5.Models;
 using WebApiAspNetCore5.Models.Context;
 
-namespace WebApiAspNetCore5.Services.Implementations
+namespace WebApiAspNetCore5.Repository.Implementations
 {
-    public class PersonServiceImplementation : IPersonService
+    public class PersonRepositoryImplementation : IPersonRepository
     {
         private MySqlContext mysqlContext;
 
-        public PersonServiceImplementation(MySqlContext mysqlContext)
+        public PersonRepositoryImplementation(MySqlContext mysqlContext)
         {
             this.mysqlContext = mysqlContext;
         }
@@ -89,7 +89,7 @@ namespace WebApiAspNetCore5.Services.Implementations
 
 
 
-        private bool Exists(long id)
+        public bool Exists(long id)
         {
             return mysqlContext.Persons.Any(p => p.id.Equals(id));
         }

@@ -13,8 +13,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApiAspNetCore5.Models.Context;
-using WebApiAspNetCore5.Services;
-using WebApiAspNetCore5.Services.Implementations;
+using WebApiAspNetCore5.Business;
+using WebApiAspNetCore5.Business.Implementations;
+using WebApiAspNetCore5.Repository;
+using WebApiAspNetCore5.Repository.Implementations;
 
 namespace WebApiAspNetCore5
 {
@@ -34,7 +36,9 @@ namespace WebApiAspNetCore5
             services.AddControllers();
             var connection = Configuration["MySqlConnection:MySqlConnectionString"];
             services.AddDbContext<MySqlContext>(options => options.UseMySql(connection));
-            services.AddScoped<IPersonService, PersonServiceImplementation>();
+            services.AddScoped<IPersonBusiness, PersonBusinessmplementation>();
+            services.AddScoped<IPersonRepository, PersonRepositoryImplementation>();
+
             services.AddApiVersioning();
             services.AddSwaggerGen(c =>
             {

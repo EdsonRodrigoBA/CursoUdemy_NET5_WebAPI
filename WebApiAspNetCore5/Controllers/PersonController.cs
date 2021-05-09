@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApiAspNetCore5.Models;
-using WebApiAspNetCore5.Services;
+using WebApiAspNetCore5.Business;
 
 namespace WebApiAspNetCore5.Controllers
 {
@@ -13,22 +13,22 @@ namespace WebApiAspNetCore5.Controllers
     [Route("api/[controller]/v{version:apiVersion}")]
     public class PersonController : Controller
     {
-        private IPersonService _ipersonService;
-        public PersonController(IPersonService ipersonService)
+        private IPersonBusiness _ipersonBusiness;
+        public PersonController(IPersonBusiness ipersonBusiness)
         {
-            this._ipersonService = ipersonService;
+            this._ipersonBusiness = ipersonBusiness;
         }
 
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_ipersonService.FindAll());
+            return Ok(_ipersonBusiness.FindAll());
         }
 
         [HttpGet("{id}")]
         public IActionResult Get(long id)
         {
-            var person = _ipersonService.FindByID(id);
+            var person = _ipersonBusiness.FindByID(id);
             if(person == null)
             {
                 return NotFound();
@@ -44,7 +44,7 @@ namespace WebApiAspNetCore5.Controllers
             {
                 return BadRequest();
             }
-            return Ok(_ipersonService.Create(person));
+            return Ok(_ipersonBusiness.Create(person));
         }
 
         [HttpPut]
@@ -55,14 +55,14 @@ namespace WebApiAspNetCore5.Controllers
             {
                 return BadRequest();
             }
-            return Ok(_ipersonService.Update(person));
+            return Ok(_ipersonBusiness.Update(person));
         }
 
 
         [HttpDelete("{id}")]
         public IActionResult Delete(long id)
         {
-             _ipersonService.Delete(id);
+             _ipersonBusiness.Delete(id);
           
             return NoContent();
         }

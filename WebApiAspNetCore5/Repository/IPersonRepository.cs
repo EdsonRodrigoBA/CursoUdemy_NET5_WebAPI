@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApiAspNetCore5.Models;
 
-namespace WebApiAspNetCore5.Services
+namespace WebApiAspNetCore5.Repository
 {
-    public interface IPersonService
+    public interface IPersonRepository
     {
 
         Person Create(Person person);
@@ -17,7 +17,7 @@ namespace WebApiAspNetCore5.Services
 
         void Delete(long id);
         List<Person> FindAll();
-
+        bool Exists(long id);
 
 
 
