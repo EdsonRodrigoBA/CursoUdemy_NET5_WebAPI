@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApiAspNetCore5.Models.Base;
 
 namespace WebApiAspNetCore5.Models
 {
     [Table("person")]
-    public class Person
+    public class Person : BaseEntity
     {
-        [Column("Id")]
-        public long id { get; set; }
+     
 
         [Column("FirstName")]
         public String firstname { get; set; }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
+using WebApiAspNetCore5.Data.Convert.Implementations;
+using WebApiAspNetCore5.Data.VO;
 using WebApiAspNetCore5.Models;
 using WebApiAspNetCore5.Models.Context;
 using WebApiAspNetCore5.Repository;
@@ -11,34 +13,41 @@ namespace WebApiAspNetCore5.Business.Implementations
 {
     public class PersonBusinessmplementation : IPersonBusiness
     {
-        private readonly IPersonRepository _ipersonRepository;
+        private readonly IRepository<Person> _ipersonRepository;
+        private readonly PersonConverter _personConverter;
 
-        public PersonBusinessmplementation(IPersonRepository ipersonRepository)
+
+        public PersonBusinessmplementation(IRepository<Person> ipersonRepository)
         {
             this._ipersonRepository = ipersonRepository;
+            this._personConverter = new PersonConverter();
         }
-        public List<Person> FindAll()
+        public List<PersonVO> FindAll()
         {
             var persons = _ipersonRepository.FindAll();
-            return persons;
+            return _personConverter.Parse(persons);
         }
 
 
 
-        public Person FindByID(long id)
+        public PersonVO FindByID(long id)
         {
-            return _ipersonRepository.FindByID(id);
+            return _personConverter.Parse(_ipersonRepository.FindByID(id));
         }
 
-        public Person Create(Person person)
+        public PersonVO Create(PersonVO person)
         {
-            return Create(person);
-              
+            var pessoaModel = _personConverter.Parse(person);
+            var pessoadcionar = _ipersonRepository.Create(pessoaModel);
+            return _personConverter.Parse(pessoadcionar);
+
 
         }
-        public Person Update(Person person)
+        public PersonVO Update(PersonVO person)
         {
-            return Update(person);
+            var pessoaModel = _personConverter.Parse(person);
+            var pessoaUpdate = _ipersonRepository.Update(pessoaModel);
+            return _personConverter.Parse(pessoaUpdate);
 
         }
         public void Delete(long id)

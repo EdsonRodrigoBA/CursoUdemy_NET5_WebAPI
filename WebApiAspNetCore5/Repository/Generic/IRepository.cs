@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApiAspNetCore5.Models;
+using WebApiAspNetCore5.Models.Base;
 
 namespace WebApiAspNetCore5.Repository
 {
-    public interface IPersonRepository
+    public interface IRepository<T> where T : BaseEntity
     {
 
-        Person Create(Person person);
+        T Create(T model);
 
-        Person FindByID(long id);
+        T FindByID(long id);
 
-        Person Update(Person person);
+        T Update(T model);
 
         void Delete(long id);
-        List<Person> FindAll();
+        List<T> FindAll();
         bool Exists(long id);
 
 
