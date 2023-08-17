@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3jHgFIWRftTynJCbem8IXAWi47h742cx/ArrCXJJq9pTuQj2wRAzceSbKu6zkCxgNAbmWHLz9iOYa15A2A6O2g==",
+  "dgSpecHash": "JF0YJbhoXJLpYmHfbnvn6cK1ytBjTRZe6lQ+SVczxyNQqk8aFeOWOlIfwuwyJcXQ5PSrCzeVyF7PjMQXnmC4NQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\edson\\source\\repos\\CursoUdemy_NET5_WebAPI\\WebApiAspNetCore5\\WebApiAspNetCore5.csproj",
   "expectedPackageFiles": [
@@ -58,6 +58,7 @@
     "C:\\Users\\edson\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\edson\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\edson\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\edson\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.13\\microsoft.visualstudio.azure.containers.tools.targets.1.10.13.nupkg.sha512",
     "C:\\Users\\edson\\.nuget\\packages\\mysqlconnector\\0.69.9\\mysqlconnector.0.69.9.nupkg.sha512",
     "C:\\Users\\edson\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\edson\\.nuget\\packages\\pomelo.entityframeworkcore.mysql\\3.2.4\\pomelo.entityframeworkcore.mysql.3.2.4.nupkg.sha512",

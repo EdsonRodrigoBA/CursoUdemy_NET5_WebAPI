@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiAspNetCore5", "WebApiAspNetCore5\WebApiAspNetCore5.csproj", "{D9FE5D7B-FB39-445D-9A85-26EFA5E93422}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiAspNetCore5", "WebApiAspNetCore5\WebApiAspNetCore5.csproj", "{D9FE5D7B-FB39-445D-9A85-26EFA5E93422}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{5664E7E3-DAA2-43C9-B931-D1FE4AE95E5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D9FE5D7B-FB39-445D-9A85-26EFA5E93422}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9FE5D7B-FB39-445D-9A85-26EFA5E93422}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9FE5D7B-FB39-445D-9A85-26EFA5E93422}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5664E7E3-DAA2-43C9-B931-D1FE4AE95E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5664E7E3-DAA2-43C9-B931-D1FE4AE95E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5664E7E3-DAA2-43C9-B931-D1FE4AE95E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5664E7E3-DAA2-43C9-B931-D1FE4AE95E5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

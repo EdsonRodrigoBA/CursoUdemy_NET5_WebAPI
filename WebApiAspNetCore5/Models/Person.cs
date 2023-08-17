@@ -21,5 +21,8 @@ namespace WebApiAspNetCore5.Models
         [Column("Address")]
         public String address { get; set; }
 
+        [Column("enabled")]
+        public bool enabled { get; set; }
+
     }
 }

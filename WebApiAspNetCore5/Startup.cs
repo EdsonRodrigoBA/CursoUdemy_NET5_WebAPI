@@ -107,10 +107,10 @@ namespace WebApiAspNetCore5
             var connection = Configuration["MySqlConnection:MySqlConnectionString"];
             services.AddDbContext<MySqlContext>(options => options.UseMySql(connection));
 
-            if (_webHostEnvironment.IsDevelopment())
-            {
-                MigrateDatabase(connection);
-            }
+            //if (_webHostEnvironment.IsDevelopment())
+            //{
+            //    MigrateDatabase(connection);
+            //}
 
             services.AddScoped<IPersonBusiness, PersonBusinessmplementation>();
 

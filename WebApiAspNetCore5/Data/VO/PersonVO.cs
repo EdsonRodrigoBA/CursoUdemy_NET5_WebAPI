@@ -26,6 +26,8 @@ namespace WebApiAspNetCore5.Data.VO
         //[JsonPropertyName("Sex")]
 
         public String address { get; set; }
+
+        public bool enabled { get; set; }
         public List<HyperMediaLink> Links { get; set; } = new List<HyperMediaLink>();
     }
 }
